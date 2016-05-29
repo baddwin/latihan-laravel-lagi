@@ -75,6 +75,15 @@
 
   #mainnav {
     z-index: 100;
+    transition: all 0.4s ease;
+  }
+
+  .sticky-thing {
+    position: fixed;
+    top: 0;
+    height: 40px;
+    line-height: 40px;
+    /*margin-bottom: 64px;*/
   }
 
   /* Custom Stylesheet */
@@ -152,9 +161,9 @@
           </ul>
         <!-- </div>
         <div class="col m3 s12"> -->
-          <form class="grey darken-4 right">
+          <form class="right">
             <div class="input-field">
-              <input id="search" type="search" required>
+              <input id="search" type="search" placeholder="Cari" required>
               <label for="search"><i class="material-icons">search</i></label>
               <!-- <i class="material-icons">search</i> -->
               <!-- <i class="material-icons">close</i> -->
@@ -167,7 +176,7 @@
       </div>
   </nav>
 
-  <nav id="mainnav" class="white" role="navigation">
+  <nav id="mainnav" class="white navbar-fixed" role="navigation">
     <div class="nav-wrapper container">
       <a id="logo-container" href="#" class="brand-logo">Logo</a>
       <ul class="right hide-on-med-and-down">
@@ -200,7 +209,11 @@
   </div>
 
   <div class="container">
-    <div class="section breakout">
+    <div class="section font-wksh white center breakout">
+      <h4>Welcome</h4>
+    </div>
+
+    <div class="section">
     <div class="slider">
         <ul class="slides">
           <li>
@@ -310,8 +323,19 @@
 
     $('.button-collapse').sideNav();
     $('.parallax').parallax();
-     $('.slider').slider({full_width: true});
-     $('#mainnav').pushpin({ top: $('#mainnav').offset().top });
+    $('.slider').slider({full_width: true});
+    // $('#mainnav').pushpin({ top: 30 });
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 30) {
+        $('#mainnav').addClass('sticky-thing');
+        // console.log('Added');
+        $('#index-banner').css('margin-top', '64px');
+      } else {
+        $('#mainnav').removeClass('sticky-thing');
+        // console.log("removed");
+        $('#index-banner').css('margin-top', '0px');
+      }
+    });
 
   }); // end of document ready
 })(jQuery); // end of jQuery name space
