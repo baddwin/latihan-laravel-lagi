@@ -176,9 +176,10 @@
       </div>
   </nav>
 
-  <nav id="mainnav" class="white navbar-fixed" role="navigation">
+<div class="navbar-fixed">
+  <nav id="mainnav" class="white" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">Logo</a>
+      <a id="logo-container" href="#" class="brand-logo"><img src="wip.png" height="40" alt="logo wakashio" /></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Navbar Link</a></li>
       </ul>
@@ -189,6 +190,7 @@
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
+</div>
 
   <div id="index-banner" class="parallax-container row">
     <div class="section no-pad-bot">
@@ -329,11 +331,11 @@
       if ($(this).scrollTop() > 30) {
         $('#mainnav').addClass('sticky-thing');
         // console.log('Added');
-        $('#index-banner').css('margin-top', '64px');
+        // $('#index-banner').css('margin-top', '64px');
       } else {
         $('#mainnav').removeClass('sticky-thing');
         // console.log("removed");
-        $('#index-banner').css('margin-top', '0px');
+        // $('#index-banner').css('margin-top', '0px');
       }
     });
 
