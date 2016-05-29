@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wakashio Indonesia Corporation</title>
+
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="dist/css/materialize.min.css">
+  <!-- <link rel="stylesheet" href="dist/font/material-design-icons/Material-Design-Icons.woff">
+  <link rel="stylesheet" href="dist/font/roboto/Roboto-Regular.woff"> -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style media="screen">
+  nav#topnav {
+    height: 30px;
+    line-height: 30px;
+  }
+
+  nav#topnav i, nav#topnav [class^="mdi-"], nav#topnav [class*="mdi-"], nav#topnav i.material-icons {
+    height: 30px;
+    line-height: 30px;
+  }
+
+  nav#topnav form {
+    /*width: 200px;*/
+    height: 30px;
+  }
+
+  nav#topnav input#search {
+    height: 30px;
+    margin: 0;
+    /*-webkit-transition: all .5s;
+	   -moz-transition: all .5s;
+	  transition: all .5s;*/
+  }
+
+  nav#topnav ul {
+    margin: 0;
+  }
+
+  nav#topnav ul a {
+    color: #fff;
+  }
+
+  nav#topnav ul li {
+    display: inline-block;
+  }
+
+  .font-wksh {
+    font-family: 'Oswald', 'Roboto', sans-serif;
+  }
+
+  @media only screen and (min-width: 601px){
+    nav#topnav, nav#topnav .nav-wrapper i, nav#topnav a.button-collapse, nav#topnav a.button-collapse i {
+      height: 30px;
+      line-height: 30px;
+    }
+
+    nav#topnav input#search:focus {
+      width: 100%;
+    }
+  }
+
+  /* Custom Stylesheet */
+  /**
+   * Use this file to override Materialize files so you can update
+   * the core Materialize files in the future
+   *
+   * Made By MaterializeCSS.com
+   */
+
+  nav ul a,
+  nav .brand-logo {
+    color: #444;
+  }
+
+  p {
+    line-height: 2rem;
+  }
+
+  .button-collapse {
+    color: #26a69a;
+  }
+
+  .parallax-container {
+    min-height: 280px;
+    line-height: 0;
+    height: auto;
+    color: rgba(255,255,255,.9);
+  }
+    .parallax-container .section {
+      width: 100%;
+    }
+
+  @media only screen and (max-width : 992px) {
+    .parallax-container .section {
+      position: absolute;
+      top: 40%;
+    }
+    #index-banner .section {
+      top: 10%;
+    }
+  }
+
+  @media only screen and (max-width : 600px) {
+    #index-banner .section {
+      top: 0;
+    }
+  }
+
+  .icon-block {
+    padding: 0 15px;
+  }
+  .icon-block .material-icons {
+    font-size: inherit;
+  }
+
+  footer.page-footer {
+    margin: 0;
+  }
+
+  </style>
+</head>
+<body>
+
+  <nav id="topnav" class="black white-text">
+    <div class="container">
+      <!-- <div class="col m1">
+      </div>
+      <div class="col m10 offset-m1">
+        <div class="row">
+        <div class="col m9 hide-on-small-and-down"> -->
+          <ul class="left font-wksh hide-on-small-and-down">
+            <li><i class="material-icons left">location_on</i>Wakashio Indonesia <span class="hide-on-med-and-down">| Jl. Karya Bakti RT 04 / RW 02, Kecepak, Batang, Jawa Tengah</span></li>
+            <li><a href="tel:085766651024"><i class="material-icons left">call</i>085766651024</a></li>
+          </ul>
+        <!-- </div>
+        <div class="col m3 s12"> -->
+          <form class="grey darken-4 right">
+            <div class="input-field">
+              <input id="search" type="search" required>
+              <label for="search"><i class="material-icons">search</i></label>
+              <!-- <i class="material-icons">search</i> -->
+              <!-- <i class="material-icons">close</i> -->
+            </div>
+          </form>
+        <!-- </div>
+      </div>
+      </div>
+      <div class="col m1"> -->
+      </div>
+  </nav>
+
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">Logo</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+  <div id="index-banner" class="parallax-container row">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center white-text text-lighten-2 font-wksh">Wakashio Indonesia</h1>
+        <!-- <div class="row center">
+          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        </div> -->
+        <div class="row center">
+          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light red lighten-1">Formulir Pendaftaran</a>
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+    <div class="parallax"><img src="parallax.jpg" alt="Unsplashed background img 1"></div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+    <div class="slider">
+        <ul class="slides">
+          <li>
+            <img src="slide1.jpg"> <!-- random image -->
+            <div class="caption center-align">
+              <h3>This is our big Tagline!</h3>
+              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+            </div>
+          </li>
+          <li>
+            <img src="slide2.jpg"> <!-- random image -->
+            <div class="caption left-align">
+              <h3>Left Aligned Caption</h3>
+              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+            </div>
+          </li>
+          <li>
+            <img src="slide3.jpg"> <!-- random image -->
+            <div class="caption right-align">
+              <h3>Right Aligned Caption</h3>
+              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
+            <h5 class="center">Speeds up development</h5>
+
+            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
+            <h5 class="center">User Experience Focused</h5>
+
+            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
+            <h5 class="center">Easy to work with</h5>
+
+            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="page-footer red">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+  <script src="dist/js/materialize.min.js"></script>
+<script type="text/javascript">
+(function($){
+  $(function(){
+
+    $('.button-collapse').sideNav();
+    $('.parallax').parallax();
+     $('.slider').slider({full_width: true});
+
+  }); // end of document ready
+})(jQuery); // end of jQuery name space
+</script>
+
+</body>
+</html>
