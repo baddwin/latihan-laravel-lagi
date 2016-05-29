@@ -69,6 +69,14 @@
     }
   }
 
+  .breakout {
+    margin-top: -70px;
+  }
+
+  #mainnav {
+    z-index: 100;
+  }
+
   /* Custom Stylesheet */
   /**
    * Use this file to override Materialize files so you can update
@@ -159,7 +167,7 @@
       </div>
   </nav>
 
-  <nav class="white" role="navigation">
+  <nav id="mainnav" class="white" role="navigation">
     <div class="nav-wrapper container">
       <a id="logo-container" href="#" class="brand-logo">Logo</a>
       <ul class="right hide-on-med-and-down">
@@ -192,7 +200,7 @@
   </div>
 
   <div class="container">
-    <div class="section">
+    <div class="section breakout">
     <div class="slider">
         <ul class="slides">
           <li>
@@ -303,6 +311,7 @@
     $('.button-collapse').sideNav();
     $('.parallax').parallax();
      $('.slider').slider({full_width: true});
+     $('#mainnav').pushpin({ top: $('#mainnav').offset().top });
 
   }); // end of document ready
 })(jQuery); // end of jQuery name space
