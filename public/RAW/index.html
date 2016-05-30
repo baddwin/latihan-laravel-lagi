@@ -140,6 +140,16 @@
     min-height: 600px;
   }
 
+  .nav-side {
+    /*position: absolute;*/
+    /*left: 0;*/
+    margin-left: -200px;
+    margin-bottom: -270px;
+    z-index: 101;
+    width: 180px;
+    position: relative;
+  }
+
   /* Custom Stylesheet */
   /**
    * Use this file to override Materialize files so you can update
@@ -248,7 +258,7 @@
   </nav>
 </div>
 
-  <ul id="sidenav" class="side-nav">
+  <!-- <ul id="sidenav" class="side-nav">
       <li><a href="#!">First Sidebar Link</a></li>
       <li><a href="#!">Second Sidebar Link</a></li>
       <li class="no-padding">
@@ -266,7 +276,7 @@
           </li>
         </ul>
       </li>
-    </ul>
+    </ul> -->
     <!-- <ul class="right hide-on-med-and-down">
       <li><a href="#!">First Sidebar Link</a></li>
       <li><a href="#!">Second Sidebar Link</a></li>
@@ -305,6 +315,16 @@
   <div class="container">
     <div class="section font-wksh white center breakout">
       <h4 class="flow-text">Selamat Datang - Welcome - ようこそ - Sugeng Rawuh</h4>
+    </div>
+
+    <div class="nav-side">
+      <ul class="collection with-header red">
+        <li class="collection-header"><h5>First Names</h5></li>
+        <li><a href="#!" class="collection-item">Alvin</a></li>
+        <li><a href="#!" class="collection-item">Alvin</a></li>
+        <li><a href="#!" class="collection-item">Alvin</a></li>
+        <li><a href="#!" class="collection-item">Alvin</a></li>
+      </ul>
     </div>
 
     <div class="section">
@@ -477,6 +497,7 @@
     $('.parallax').parallax();
     $('.slider').slider({full_width: true});
     $('.carousel').carousel({dist: 0,padding: 20});
+    $('.nav-side').pushpin({ top: 400, offset: 40 });
     // $('#mainnav').pushpin({ top: 30 });
     $(window).scroll(function() {
       if ($(this).scrollTop() > 10) {
