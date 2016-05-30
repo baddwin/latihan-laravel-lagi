@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="dist/css/materialize.min.css">
   <!-- <link rel="stylesheet" href="dist/font/material-design-icons/Material-Design-Icons.woff">
   <link rel="stylesheet" href="dist/font/roboto/Roboto-Regular.woff"> -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
   <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -19,6 +19,43 @@
   <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
   <style media="screen">
+  @font-face {
+   font-family: 'Material Icons';
+   font-style: normal;
+   font-weight: 400;
+   src: url(dist/iconfont/MaterialIcons-Regular.eot); /* For IE6-8 */
+   src: local('Material Icons'),
+        local('MaterialIcons-Regular'),
+        url(dist/iconfont/MaterialIcons-Regular.woff2) format('woff2'),
+        url(dist/iconfont/MaterialIcons-Regular.woff) format('woff'),
+        url(dist/iconfont/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+  .material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+  }
+
   nav#topnav {
     height: 30px;
     line-height: 30px;
@@ -76,6 +113,14 @@
   #mainnav {
     z-index: 100;
     transition: all 0.4s ease;
+  }
+
+  #logo-container {
+    height: 100%;
+  }
+
+  .brand-logo img {
+    max-height: 100%;
   }
 
   .sticky-thing {
@@ -144,6 +189,84 @@
     margin: 0;
   }
 
+
+  /* testi slider */
+
+  .flex-direction-nav li {
+  position: absolute;
+  height: 100%;
+  width: 40px;
+  top: 0;
+}
+
+.flex-direction-nav li:first-child {
+  left: 0;
+}
+
+.flex-direction-nav li:last-child {
+  right: 0;
+}
+
+.flex-direction-nav li a {
+  display: block;
+  height: 100%;
+  width: 100%;
+
+  /* image replacement */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+
+  transition: background-color 0.2s;
+}
+
+.flex-direction-nav li a::before, .flex-direction-nav li a::after {
+  /* left and right arrows in css only */
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 2px;
+  height: 13px;
+  background-color: white;
+}
+
+.flex-direction-nav li a::before {
+  transform: translateY(-35px) rotate(45deg);
+}
+
+.flex-direction-nav li a::after {
+  transform: translateY(-27px) rotate(-45deg);
+}
+
+.flex-direction-nav li:last-child a::before {
+  transform: translateY(-35px) rotate(-45deg);
+}
+
+.flex-direction-nav li:last-child a::after {
+  transform: translateY(-27px) rotate(45deg);
+}
+
+.cd-testimonials-all {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  z-index: 2;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .3s 0s, visibility 0s .3s;
+}
+
+.cd-testimonials-all.is-visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
+
   </style>
 </head>
 <body>
@@ -179,22 +302,22 @@
 <div class="navbar-fixed">
   <nav id="mainnav" class="white" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo"><img src="wip.png" height="40" alt="logo wakashio" /></a>
+      <a id="logo-container" href="#" class="brand-logo"><img src="wip.png" alt="logo wakashio" /></a>
       <ul class="right hide-on-med-and-down">
         <li class="active"><a href="#">Home</a></li>
         <li><a class="waves-effect waves-light btn red">Pendaftaran Online</a></li>
       </ul>
-
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="side-nav">
         <li class="active"><a href="#">Home</a></li>
         <li><a class="waves-effect waves-light btn red">Pendaftaran Online</a></li>
       </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+
     </div>
   </nav>
 </div>
 
-  <ul id="sidenav" class="side-nav fixed">
+  <ul id="sidenav" class="side-nav">
       <li><a href="#!">First Sidebar Link</a></li>
       <li><a href="#!">Second Sidebar Link</a></li>
       <li class="no-padding">
@@ -324,31 +447,49 @@
       <div class="section">
 
       <div class="video-container">
-        <iframe width="853" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder="0" allowfullscreen></iframe>
+        <iframe width="640" height="360" src="//www.youtube.com/embed/HdhiX9bUVXY?rel=0" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
   </div>
 
   <div class="section testimonial red">
-    <div class="container">
+    <!-- <div class="container"> -->
 
-  <div class="carousel">
-    <a class="carousel-item" href="#one!"><img src="http://lorempixel.com/250/250/nature/1"></a>
-    <a class="carousel-item" href="#two!"><img src="http://lorempixel.com/250/250/nature/2"></a>
-    <a class="carousel-item" href="#three!"><img src="http://lorempixel.com/250/250/nature/3"></a>
-    <a class="carousel-item" href="#four!"><img src="http://lorempixel.com/250/250/nature/4"></a>
-    <a class="carousel-item" href="#five!"><img src="http://lorempixel.com/250/250/nature/5"></a>
+
+    <div class="slider">
+      <ul class="slides red">
+        <li>
+          <!-- <img src="http://lorempixel.com/580/250/nature/1">-->
+          <div class="caption center-align">
+            <h3>Dodit Mulyanto</h3>
+            <h5 class="light grey-text text-lighten-3">hidup itu ya tidak mati.</h5>
+            <img src="wk.png" height="50" alt="" />
+          </div>
+        </li>
+        <li>
+          <!-- <img src="http://lorempixel.com/580/250/nature/4"> -->
+          <div class="caption center-align">
+            <h3>Vincent Desta</h3>
+            <h5 class="light grey-text text-lighten-3">lo ngomong jangan asal.</h5>
+            <img src="wk.png" height="50" alt="" />
+          </div>
+        </li>
+        <li>
+          <!-- <img src="http://lorempixel.com/580/250/nature/4"> -->
+          <div class="caption center-align">
+            <h3>This is our big Tagline!</h3>
+            <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+            <img src="wk.png" height="50" alt="" />
+          </div>
+        </li>
+      </ul>
+    </div>
+
+
+    <!-- </div> -->
   </div>
 
-  <div class="carousel carousel-slider">
-    <a class="carousel-item" href="#one!"><img src="http://lorempixel.com/800/400/food/1"></a>
-    <a class="carousel-item" href="#two!"><img src="http://lorempixel.com/800/400/food/2"></a>
-    <a class="carousel-item" href="#three!"><img src="http://lorempixel.com/800/400/food/3"></a>
-    <a class="carousel-item" href="#four!"><img src="http://lorempixel.com/800/400/food/4"></a>
-  </div>
 
-      </div>
-  </div>
 
   <footer class="page-footer black">
     <div class="container">
@@ -391,18 +532,19 @@
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
   <script src="dist/js/materialize.min.js"></script>
+  <script src="jquery.flexslider-min.js"></script>
 <script type="text/javascript">
 (function($){
   $(function(){
 
     $('.button-collapse').sideNav();
-    $('.collapse').sideNav({edge: "right",menuWidth: 200});
+    // $('.collapse').sideNav({edge: "right",menuWidth: 200});
     $('.parallax').parallax();
     $('.slider').slider({full_width: true});
-    $('.carousel').carousel();
+    $('.carousel').carousel({dist: 0,padding: 20});
     // $('#mainnav').pushpin({ top: 30 });
     $(window).scroll(function() {
-      if ($(this).scrollTop() > 30) {
+      if ($(this).scrollTop() > 10) {
         $('#mainnav').addClass('sticky-thing');
         // console.log('Added');
         // $('#index-banner').css('margin-top', '64px');
