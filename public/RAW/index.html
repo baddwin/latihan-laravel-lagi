@@ -136,6 +136,10 @@
     width: 70px;
   }
 
+  .testimonial {
+    min-height: 600px;
+  }
+
   /* Custom Stylesheet */
   /**
    * Use this file to override Materialize files so you can update
@@ -193,84 +197,6 @@
   footer.page-footer {
     margin: 0;
   }
-
-
-  /* testi slider */
-
-  .flex-direction-nav li {
-  position: absolute;
-  height: 100%;
-  width: 40px;
-  top: 0;
-}
-
-.flex-direction-nav li:first-child {
-  left: 0;
-}
-
-.flex-direction-nav li:last-child {
-  right: 0;
-}
-
-.flex-direction-nav li a {
-  display: block;
-  height: 100%;
-  width: 100%;
-
-  /* image replacement */
-  overflow: hidden;
-  text-indent: 100%;
-  white-space: nowrap;
-
-  transition: background-color 0.2s;
-}
-
-.flex-direction-nav li a::before, .flex-direction-nav li a::after {
-  /* left and right arrows in css only */
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 2px;
-  height: 13px;
-  background-color: white;
-}
-
-.flex-direction-nav li a::before {
-  transform: translateY(-35px) rotate(45deg);
-}
-
-.flex-direction-nav li a::after {
-  transform: translateY(-27px) rotate(-45deg);
-}
-
-.flex-direction-nav li:last-child a::before {
-  transform: translateY(-35px) rotate(-45deg);
-}
-
-.flex-direction-nav li:last-child a::after {
-  transform: translateY(-27px) rotate(45deg);
-}
-
-.cd-testimonials-all {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: white;
-  z-index: 2;
-
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity .3s 0s, visibility 0s .3s;
-}
-
-.cd-testimonials-all.is-visible {
-  visibility: visible;
-  opacity: 1;
-  transition: opacity .3s 0s, visibility 0s 0s;
-}
 
   </style>
 </head>
@@ -459,7 +385,7 @@
 
   <div class="section testimonial red">
     <!-- <div class="container"> -->
-
+    <h4 class="white-text center-align">Testimonial</h4>
 
     <div class="slider">
       <ul class="slides red">
