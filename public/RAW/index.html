@@ -133,6 +133,11 @@
       /*margin-bottom: 64px;*/
     }
 
+    #mainnav.pinned {
+      height: 40px;
+      line-height: 40px;
+    }
+
     .slides li img.img-avatar {
       height: 70px;
       width: 70px;
@@ -245,7 +250,7 @@
       </div>
     </nav>
 
-    <div class="navbar-fixed">
+    <!-- <div class="navb"> -->
       <nav id="mainnav" class="white" role="navigation">
         <div class="nav-wrapper container">
           <a id="logo-container" href="#" class="brand-logo"><img src="wip.png" alt="logo wakashio" /></a>
@@ -272,7 +277,7 @@
 
         </div>
       </nav>
-    </div>
+    <!-- </div> -->
 
     <a href="#" data-activates="sidenav" class="collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
 
@@ -629,16 +634,16 @@
         });
         // $('.nav-side').pushpin({ top: 400, offset: 40 });
         // $('.dropdown-button').dropdown({hover: true});
-        // $('#mainnav').pushpin({ top: 30 });
-        $(window).on("scroll", function() {
-          if ($(this).scrollTop() > 10) {
-            $('#mainnav').addClass('sticky-thing');
-            // console.log('muncul');
-          } else {
-            $('#mainnav').removeClass('sticky-thing');
-            // console.log("removed");
-          }
-        });
+        $('#mainnav').pushpin({ top: 30 });
+        // $(window).on("scroll", function() {
+        //   if ($(this).scrollTop() > 10) {
+        //     $('#mainnav').addClass('sticky-thing');
+        //     // console.log('muncul');
+        //   } else {
+        //     $('#mainnav').removeClass('sticky-thing');
+        //     // console.log("removed");
+        //   }
+        // });
 
       }); // end of document ready
     })(jQuery); // end of jQuery name space
