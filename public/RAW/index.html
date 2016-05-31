@@ -246,12 +246,23 @@
       <a id="logo-container" href="#" class="brand-logo"><img src="wip.png" alt="logo wakashio" /></a>
       <ul class="right hide-on-med-and-down">
         <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Tentang</a></li>
+        <li><a class="dropdown-button" href="#" data-hover="true" data-beloworigin="true" data-activates='dropdown-ttg'>Tentang</a></li>
         <li><a href="#">Magang Jepang</a></li>
         <li><a href="#">Gallery</a></li>
         <li><a href="#">Info Terbaru</a></li>
         <li><a href="#">Lokasi</a></li>
         <!-- <li><a class="waves-effect waves-light btn red">Pendaftaran Online</a></li> -->
+      </ul>
+      <ul id='dropdown-ttg' class='dropdown-content'>
+        <li><a href="#!">one</a></li>
+        <li><a href="#!">two</a></li>
+        <ul>
+          <li><a href="#!">one</a></li>
+          <li><a href="#!">two</a></li>
+          <li><a href="#!">three</a></li>
+        </ul>
+        <li class="divider"></li>
+        <li><a href="#!">three</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="side-nav">
@@ -306,9 +317,9 @@
           <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
         </div> -->
         <div class="center-align">
-          <a href="#" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Wakashio"><img src="wip.png" height="70" alt="" /></a>
-          <a href="#" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Wakashio"><img src="wk.png" height="70" alt="" /></a>
-          <br/><a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light red show-on-small hide-on-med-and-up">Formulir Pendaftaran</a>
+          <a href="#" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Wakashio PT"><img src="wip.png" height="70" alt="" /></a>
+          <a href="#" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Wakashio LPK"><img src="wk.png" height="70" alt="" /></a>
+          <br/><br/><a href="#!" id="daftar-online-btn" class="btn-large waves-effect waves-light red show-on-small hide-on-med-and-up">Formulir Pendaftaran</a>
         </div>
         <br><br>
 
@@ -318,8 +329,13 @@
   </div>
 
   <div class="container">
-    <div class="section font-wksh white center breakout">
-      <h4 class="flow-text">Selamat Datang - Welcome - ようこそ - Sugeng Rawuh</h4>
+    <div class="section font-wksh white center breakout row">
+      <div class="col s12 m8 l9">
+        <h4 class="flow-text">Selamat Datang - Welcome - ようこそ</h4>
+      </div>
+      <div class="col m4 l3">
+        <a href="#" class="waves-effect waves-light btn-large btn red hide-on-small-only">Pendaftaran Online</a>
+      </div>
     </div>
 
     <div class="nav-side">
@@ -478,10 +494,21 @@
           </ul>
         </div>
       </div>
+      <div class="row">
+        <div class="col m4">
+          FB1
+        </div>
+        <div class="col m4">
+          FB2
+        </div>
+        <div class="col m4">
+          FB3
+        </div>
+      </div>
     </div>
-    <div class="footer-copyright">
+    <div class="footer-copyright blue-grey darken-4">
       <div class="container">
-      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      Designed by <a class="brown-text text-lighten-3" href="https://github.com/baddwin">bdd</a>
       </div>
     </div>
   </footer>
@@ -489,8 +516,6 @@
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
   <script src="dist/js/jquery.min.js" charset="utf-8"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
   <script src="dist/js/materialize.min.js"></script>
   <script src="jquery.flexslider-min.js"></script>
 <script type="text/javascript">
@@ -498,25 +523,18 @@
   $(function(){
 
     $('.button-collapse').sideNav();
-    // $('.collapse').sideNav({edge: "right",menuWidth: 200});
     $('.parallax').parallax();
     $('.slider').slider({full_width: true});
-    $('.carousel').carousel({dist: 0,padding: 20});
     $('.nav-side').pushpin({ top: 400, offset: 40 });
+    // $('.dropdown-button').dropdown({hover: true});
     // $('#mainnav').pushpin({ top: 30 });
-    $(window).scroll(function() {
+    $(window).on("scroll",function() {
       if ($(this).scrollTop() > 10) {
         $('#mainnav').addClass('sticky-thing');
-        // console.log('Added');
-        // $('#index-banner').css('margin-top', '64px');
-      // } else if ($(this).scrollTop() > 354) {
-      //   $('.collapse').sideNav('show');
-      //   console.log('muncul');
+        // console.log('muncul');
       } else {
         $('#mainnav').removeClass('sticky-thing');
         // console.log("removed");
-        // $('#index-banner').css('margin-top', '0px');
-        // $('.collapse').sideNav('hide');
       }
     });
 
