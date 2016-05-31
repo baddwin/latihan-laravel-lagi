@@ -153,6 +153,13 @@
       line-height: 1.5rem;
       padding: 5px 5px;
     }
+
+    .btn-floating {
+      position: fixed;
+      right: 40px;
+      bottom: 40px;
+      display: none;
+    }
     /* Custom Stylesheet */
     /**
    * Use this file to override Materialize files so you can update
@@ -278,6 +285,7 @@
 
   </header>
 
+  <main>
   <div id="index-banner" class="parallax-container row">
     <div class="section no-pad-bot">
       <div class="container">
@@ -560,11 +568,10 @@
       </ul>
     </div>
 
-
     <!-- </div> -->
   </div>
-
-
+  <a href="#!" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">navigation</i></a>
+  </main>
 
   <footer class="page-footer black">
     <div class="container">
@@ -630,14 +637,25 @@
         // $('.nav-side').pushpin({ top: 400, offset: 40 });
         // $('.dropdown-button').dropdown({hover: true});
         // $('#mainnav').pushpin({ top: 30 });
+        var mainnav = $('#mainnav');
+        var floatbtn = $('.btn-floating');
         $(window).on("scroll", function() {
           if ($(this).scrollTop() > 10) {
-            $('#mainnav').addClass('sticky-thing');
+            mainnav.addClass('sticky-thing');
+            floatbtn.fadeIn();
             // console.log('muncul');
           } else {
-            $('#mainnav').removeClass('sticky-thing');
+            mainnav.removeClass('sticky-thing');
+            floatbtn.fadeOut();
             // console.log("removed");
           }
+        });
+
+        floatbtn.click(function(){
+          $("html, body").animate({
+            scrollTop: 0
+            }, 600);
+          return false;
         });
 
       }); // end of document ready
