@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,269 +21,268 @@
   <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
   <style media="screen">
-  @font-face {
-   font-family: 'Material Icons';
-   font-style: normal;
-   font-weight: 400;
-   src: url(dist/iconfont/MaterialIcons-Regular.eot); /* For IE6-8 */
-   src: local('Material Icons'),
-        local('MaterialIcons-Regular'),
-        url(dist/iconfont/MaterialIcons-Regular.woff2) format('woff2'),
-        url(dist/iconfont/MaterialIcons-Regular.woff) format('woff'),
-        url(dist/iconfont/MaterialIcons-Regular.ttf) format('truetype');
-}
+    @font-face {
+      font-family: 'Material Icons';
+      font-style: normal;
+      font-weight: 400;
+      src: url(dist/iconfont/MaterialIcons-Regular.eot);
+      /* For IE6-8 */
+      src: local('Material Icons'), local('MaterialIcons-Regular'), url(dist/iconfont/MaterialIcons-Regular.woff2) format('woff2'), url(dist/iconfont/MaterialIcons-Regular.woff) format('woff'), url(dist/iconfont/MaterialIcons-Regular.ttf) format('truetype');
+    }
 
-  .material-icons {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
+    .material-icons {
+      font-family: 'Material Icons';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      /* Preferred icon size */
+      display: inline-block;
+      line-height: 1;
+      text-transform: none;
+      letter-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      direction: ltr;
+      /* Support for all WebKit browsers. */
+      -webkit-font-smoothing: antialiased;
+      /* Support for Safari and Chrome. */
+      text-rendering: optimizeLegibility;
+      /* Support for Firefox. */
+      -moz-osx-font-smoothing: grayscale;
+      /* Support for IE. */
+      font-feature-settings: 'liga';
+    }
 
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-
-  /* Support for IE. */
-  font-feature-settings: 'liga';
-  }
-
-  nav#topnav {
-    height: 30px;
-    line-height: 30px;
-  }
-
-  nav#topnav i, nav#topnav [class^="mdi-"], nav#topnav [class*="mdi-"], nav#topnav i.material-icons {
-    height: 30px;
-    line-height: 30px;
-  }
-
-  nav#topnav form {
-    width: 200px;
-    height: 30px;
-  }
-
-  nav#topnav input#search {
-    height: 30px;
-    margin: 0;
-    /*-webkit-transition: all .5s;
-	   -moz-transition: all .5s;
-	  transition: all .5s;*/
-  }
-
-  nav#topnav ul {
-    margin: 0;
-  }
-
-  nav#topnav ul a {
-    color: #fff;
-  }
-
-  nav#topnav ul li {
-    display: inline-block;
-  }
-
-  .font-wksh {
-    font-family: 'Oswald', 'Roboto', sans-serif;
-  }
-
-  @media only screen and (min-width: 601px){
-    nav#topnav, nav#topnav .nav-wrapper i, nav#topnav a.button-collapse, nav#topnav a.button-collapse i {
+    nav#topnav {
       height: 30px;
       line-height: 30px;
     }
 
-    nav#topnav input#search:focus {
-      width: 100%;
+    nav#topnav i,
+    nav#topnav [class^="mdi-"],
+    nav#topnav [class*="mdi-"],
+    nav#topnav i.material-icons {
+      height: 30px;
+      line-height: 30px;
     }
-  }
 
-  .breakout {
-    margin-top: -70px;
-  }
+    nav#topnav form {
+      width: 200px;
+      height: 30px;
+    }
 
-  #mainnav {
-    z-index: 100;
-    transition: all 0.4s ease;
-  }
+    nav#topnav input#search {
+      height: 30px;
+      margin: 0;
+      /*-webkit-transition: all .5s;
+	   -moz-transition: all .5s;
+	  transition: all .5s;*/
+    }
 
-  #logo-container {
-    height: 100%;
-  }
+    nav#topnav ul {
+      margin: 0;
+    }
 
-  .brand-logo img {
-    max-height: 100%;
-  }
+    nav#topnav ul a {
+      color: #fff;
+    }
 
-  .sticky-thing {
-    position: fixed;
-    top: 0;
-    height: 40px;
-    line-height: 40px;
-    /*margin-bottom: 64px;*/
-  }
+    nav#topnav ul li {
+      display: inline-block;
+    }
 
-  .slides li img.img-avatar {
-    height: 70px;
-    width: 70px;
-  }
+    .font-wksh {
+      font-family: 'Oswald', 'Roboto', sans-serif;
+    }
 
-  .testimonial {
-    min-height: 600px;
-  }
+    @media only screen and (min-width: 601px) {
+      nav#topnav,
+      nav#topnav .nav-wrapper i,
+      nav#topnav a.button-collapse,
+      nav#topnav a.button-collapse i {
+        height: 30px;
+        line-height: 30px;
+      }
+      nav#topnav input#search:focus {
+        width: 100%;
+      }
+    }
 
-  .nav-side {
-    /*position: absolute;*/
-    /*left: 0;*/
+    .breakout {
+      margin-top: -70px;
+    }
+
+    #mainnav {
+      z-index: 100;
+      transition: all 0.4s ease;
+    }
+
+    #logo-container {
+      height: 100%;
+    }
+
+    .brand-logo img {
+      max-height: 100%;
+    }
+
+    .sticky-thing {
+      position: fixed;
+      top: 0;
+      height: 40px;
+      line-height: 40px;
+      /*margin-bottom: 64px;*/
+    }
+
+    .slides li img.img-avatar {
+      height: 70px;
+      width: 70px;
+    }
+
+    .testimonial {
+      min-height: 600px;
+    }
+    /*.nav-side {
     margin-left: -200px;
     margin-bottom: -270px;
     z-index: 101;
     width: 180px;
     position: relative;
-  }
+    }*/
 
-  /* Custom Stylesheet */
-  /**
+    .collection .collection-item {
+      line-height: 1.5rem;
+      padding: 5px 5px;
+    }
+    /* Custom Stylesheet */
+    /**
    * Use this file to override Materialize files so you can update
    * the core Materialize files in the future
    *
    * Made By MaterializeCSS.com
    */
 
-  nav ul a,
-  nav .brand-logo {
-    color: #444;
-  }
+    nav ul a,
+    nav .brand-logo {
+      color: #444;
+    }
 
-  p {
-    line-height: 2rem;
-  }
+    p {
+      line-height: 2rem;
+    }
 
-  .button-collapse {
-    color: #26a69a;
-  }
+    .button-collapse {
+      color: #26a69a;
+    }
 
-  .parallax-container {
-    min-height: 280px;
-    line-height: 0;
-    height: auto;
-    color: rgba(255,255,255,.9);
-  }
+    .parallax-container {
+      min-height: 280px;
+      line-height: 0;
+      height: auto;
+      color: rgba(255, 255, 255, .9);
+    }
+
     .parallax-container .section {
       width: 100%;
     }
 
-  @media only screen and (max-width : 992px) {
-    .parallax-container .section {
-      position: absolute;
-      top: 40%;
+    @media only screen and (max-width: 992px) {
+      .parallax-container .section {
+        position: absolute;
+        top: 40%;
+      }
+      #index-banner .section {
+        top: 10%;
+      }
     }
-    #index-banner .section {
-      top: 10%;
+
+    @media only screen and (max-width: 600px) {
+      #index-banner .section {
+        top: 0;
+      }
     }
-  }
 
-  @media only screen and (max-width : 600px) {
-    #index-banner .section {
-      top: 0;
+    .icon-block {
+      padding: 0 15px;
     }
-  }
 
-  .icon-block {
-    padding: 0 15px;
-  }
-  .icon-block .material-icons {
-    font-size: inherit;
-  }
+    .icon-block .material-icons {
+      font-size: inherit;
+    }
 
-  footer.page-footer {
-    margin: 0;
-  }
-
+    footer.page-footer {
+      margin: 0;
+    }
   </style>
 </head>
+
 <body>
-<header>
-  <nav id="topnav" class="black white-text">
-    <div class="container">
-      <!-- <div class="col m1">
+  <header>
+    <nav id="topnav" class="black white-text">
+      <div class="container">
+        <!-- <div class="col m1">
       </div>
       <div class="col m10 offset-m1">
         <div class="row">
         <div class="col m9 hide-on-small-and-down"> -->
-          <ul class="left font-wksh hide-on-small-and-down">
-            <li><i class="material-icons left">location_on</i>Wakashio Indonesia <span class="hide-on-med-and-down">| Jl. Karya Bakti RT 04 / RW 02, Kecepak, Batang, Jawa Tengah</span></li>
-            <li><a href="tel:085766651024"><i class="material-icons left">call</i>085766651024</a></li>
-          </ul>
+        <ul class="left font-wksh hide-on-small-and-down">
+          <li><i class="material-icons left">location_on</i>Wakashio Indonesia <span class="hide-on-med-and-down">| Jl. Karya Bakti RT 04 / RW 02, Kecepak, Batang, Jawa Tengah</span></li>
+          <li><a href="tel:085766651024"><i class="material-icons left">call</i>085766651024</a></li>
+        </ul>
         <!-- </div>
         <div class="col m3 s12"> -->
-          <form class="right">
-            <div class="input-field">
-              <input id="search" type="search" placeholder="Cari" required>
-              <label for="search"><i class="material-icons">search</i></label>
-              <!-- <i class="material-icons">search</i> -->
-              <!-- <i class="material-icons">close</i> -->
-            </div>
-          </form>
+        <form class="right">
+          <div class="input-field">
+            <input id="search" type="search" placeholder="Cari" required>
+            <label for="search"><i class="material-icons">search</i></label>
+            <!-- <i class="material-icons">search</i> -->
+            <!-- <i class="material-icons">close</i> -->
+          </div>
+        </form>
         <!-- </div>
       </div>
       </div>
       <div class="col m1"> -->
       </div>
-  </nav>
+    </nav>
 
-<div class="navbar-fixed">
-  <nav id="mainnav" class="white" role="navigation">
-    <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo"><img src="wip.png" alt="logo wakashio" /></a>
-      <ul class="right hide-on-med-and-down">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a class="dropdown-button" href="#" data-hover="true" data-beloworigin="true" data-activates='dropdown-ttg'>Tentang</a></li>
-        <li><a href="#">Magang Jepang</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#">Info Terbaru</a></li>
-        <li><a href="#">Lokasi</a></li>
-        <!-- <li><a class="waves-effect waves-light btn red">Pendaftaran Online</a></li> -->
-      </ul>
-      <ul id='dropdown-ttg' class='dropdown-content'>
-        <li><a href="#!">one</a></li>
-        <li><a href="#!">two</a></li>
-        <ul>
-          <li><a href="#!">one</a></li>
-          <li><a href="#!">two</a></li>
-          <li><a href="#!">three</a></li>
-        </ul>
-        <li class="divider"></li>
-        <li><a href="#!">three</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul id="nav-mobile" class="side-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a class="waves-effect waves-light btn red">Pendaftaran Online</a></li>
-      </ul>
+    <div class="navbar-fixed">
+      <nav id="mainnav" class="white" role="navigation">
+        <div class="nav-wrapper container">
+          <a id="logo-container" href="#" class="brand-logo"><img src="wip.png" alt="logo wakashio" /></a>
+          <ul id="nav-main" class="right hide-on-med-and-down">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a class="dropdown-button" href="#" data-hover="true" data-beloworigin="true" data-activates="dropdown-ttg">Tentang</a></li>
+            <li><a class="dropdown-button" href="#" data-hover="true" data-beloworigin="true" data-activates="dropdown-ttg">Magang Jepang</a></li>
+            <li><a class="dropdown-button" href="#" data-hover="true" data-beloworigin="true" data-activates="dropdown-ttg">Gallery</a></li>
+            <li><a href="#">Info Terbaru</a></li>
+            <li><a href="#">Lokasi</a></li>
+            <!-- <li><a class="waves-effect waves-light btn red">Pendaftaran Online</a></li> -->
+          </ul>
+          <ul id='dropdown-ttg' class='dropdown-content'>
+            <li><a href="#!">one</a></li>
+            <li><a href="#!">two</a></li>
+            <li class="divider"></li>
+            <li><a href="#!">three</a></li>
+          </ul>
+          <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="side-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a class="waves-effect waves-light btn red">Pendaftaran Online</a></li>
+          </ul>
 
+        </div>
+      </nav>
     </div>
-  </nav>
-</div>
 
-<a href="#" data-activates="sidenav" class="collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
+    <a href="#" data-activates="sidenav" class="collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
 
-</header>
+  </header>
 
   <div id="index-banner" class="parallax-container row">
     <div class="section no-pad-bot">
       <div class="container">
-        <br><br>
+        <br>
+        <br>
         <h1 class="header center white-text font-wksh flow-text">Wakashio Indonesia</h1>
         <!-- <div class="row center">
           <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
@@ -290,9 +290,11 @@
         <div class="center-align">
           <a href="#" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Wakashio PT"><img src="wip.png" height="70" alt="" /></a>
           <a href="#" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Wakashio LPK"><img src="wk.png" height="70" alt="" /></a>
-          <br/><br/><a href="#!" id="daftar-online-btn" class="btn-large waves-effect waves-light red show-on-small hide-on-med-and-up">Formulir Pendaftaran</a>
+          <br/>
+          <br/><a href="#!" id="daftar-online-btn" class="btn-large waves-effect waves-light red show-on-small hide-on-med-and-up">Formulir Pendaftaran</a>
         </div>
-        <br><br>
+        <br>
+        <br>
 
       </div>
     </div>
@@ -308,18 +310,28 @@
         <a href="#" class="waves-effect waves-light btn-large btn red hide-on-small-only">Pendaftaran Online</a>
       </div>
     </div>
+  </div>
 
-    <div class="nav-side">
-      <ul class="collection with-header red">
-        <li class="collection-header"><h5>Navigasi</h5></li>
-        <li><a href="#!" class="collection-item">Alvin</a></li>
-        <li><a href="#!" class="collection-item">Alvin</a></li>
-        <li><a href="#!" class="collection-item">Alvin</a></li>
-        <li><a href="#!" class="collection-item">Alvin</a></li>
-      </ul>
+  <div class="row">
+    <div class="col s12 m12 l2">
+      <div class="nav-side">
+
+        <div class="hide-on-med-and-down">
+          <ul id="menu-wakashio-sidebar-utama" class="collection with-header">
+            <h5 class="collection-header">Wakashio Indonesia</h5>
+            <li><a href="/wakashio-indonesia/profil-kami/" class="collection-item">Profil Kami</a></li>
+            <li><a href="/pemagangan-jepang/persyaratan-menjadi-pemagang-ke-jepang/" class="collection-item">Syarat Pemagang ke Jepang</a></li>
+            <li><a href="/wakashio-indonesia/biaya-pendidikan/" class="collection-item">Biaya pendidikan</a></li>
+            <li><a href="/wakashio-indonesia/jadwal-kelas-baru/" class="collection-item">Jadwal kelas baru</a></li>
+            <li><a href="/wakashio-indonesia/keunggulan-kami/" class="collection-item">Keunggulan LPK Wakashio Gakkou</a></li>
+            <li><a href="/wakashio-indonesia/legalitas/" class="collection-item">Legalitas LPK Wakashio Gakkou</a></li>
+            <li><a href="/wakashio-indonesia/peta-lokasi-lpk-wakashio-gakkou/" class="collection-item">Lokasi LPK Wakashio Gakkou</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
 
-  <!-- <div class="col-md-12">
+    <!-- <div class="col-md-12">
     <div id="cssmenu">
       <ul>
          <li class="active"><a href="#" target="_blank"><i class="fa fa-fw fa-home"></i> Home</a></li>
@@ -339,79 +351,174 @@
       </ul>
     </div>
   </div> -->
-
-    <div class="section">
-    <div class="slider">
-        <ul class="slides">
-          <li>
-            <img src="slide1.jpg"> <!-- random image -->
-            <div class="caption center-align">
-              <h3>This is our big Tagline!</h3>
-              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-            </div>
-          </li>
-          <li>
-            <img src="slide2.jpg"> <!-- random image -->
-            <div class="caption left-align">
-              <h3>Left Aligned Caption</h3>
-              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-            </div>
-          </li>
-          <li>
-            <img src="slide3.jpg"> <!-- random image -->
-            <div class="caption right-align">
-              <h3>Right Aligned Caption</h3>
-              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="section">
-
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-            <h5 class="center">Speeds up development</h5>
-
-            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-            <h5 class="center">User Experience Focused</h5>
-
-            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
-            <h5 class="center">Easy to work with</h5>
-
-            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
-          </div>
+    <div class="col m10 l8 offset-m1">
+      <div class="section">
+        <div class="slider">
+          <ul class="slides">
+            <li>
+              <img src="slide1.jpg">
+              <!-- random image -->
+              <div class="caption center-align">
+                <h3>This is our big Tagline!</h3>
+                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+              </div>
+            </li>
+            <li>
+              <img src="slide2.jpg">
+              <!-- random image -->
+              <div class="caption left-align">
+                <h3>Left Aligned Caption</h3>
+                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+              </div>
+            </li>
+            <li>
+              <img src="slide3.jpg">
+              <!-- random image -->
+              <div class="caption right-align">
+                <h3>Right Aligned Caption</h3>
+                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
 
-    </div>
-  </div>
-
-    <div class="parallax-container">
-      <div class="parallax"><img src="parallax.jpg"></div>
-    </div>
-
-    <div class="container">
       <div class="section">
 
-      <div class="video-container">
-        <iframe width="640" height="360" src="//www.youtube.com/embed/HdhiX9bUVXY?rel=0" frameborder="0" allowfullscreen></iframe>
+        <!--   Icon Section   -->
+        <div class="row">
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
+              <h5 class="center">Speeds up development</h5>
+
+              <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+            </div>
+          </div>
+
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center brown-text"><i class="material-icons">group</i></h2>
+              <h5 class="center">User Experience Focused</h5>
+
+              <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms
+                allow for a more unified user experience.</p>
+            </div>
+          </div>
+
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
+              <h5 class="center">Easy to work with</h5>
+
+              <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="section">
+        <div class="video-container">
+          <iframe width="640" height="360" src="//www.youtube.com/embed/HdhiX9bUVXY?rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <!-- <div class="parallax-container">
+      <div class="parallax"><img src="parallax.jpg"></div>
+    </div> -->
+
+    </div>
+
+    <div class="col s12 m12 l2">
+      <div class="nav-side row">
+        <!-- <ul class="collection with-header red">
+          <li class="collection-header">
+            <h5>Navigasi</h5></li>
+          <li><a href="#!" class="collection-item">Alvin</a></li>
+          <li><a href="#!" class="collection-item">Alvin</a></li>
+          <li><a href="#!" class="collection-item">Alvin</a></li>
+          <li><a href="#!" class="collection-item">Alvin</a></li>
+        </ul> -->
+        <div class="col s12 m6 l12">
+
+        <div class="show-on-medium-and-down hide-on-large-only">
+          <ul id="menu-wakashio-sidebar-utama" class="collection with-header">
+            <h5 class="collection-header">Wakashio Indonesia</h5>
+            <li><a href="/wakashio-indonesia/profil-kami/" class="collection-item">Profil Kami</a></li>
+            <li><a href="/pemagangan-jepang/persyaratan-menjadi-pemagang-ke-jepang/" class="collection-item">Syarat Pemagang ke Jepang</a></li>
+            <li><a href="/wakashio-indonesia/biaya-pendidikan/" class="collection-item">Biaya pendidikan</a></li>
+            <li><a href="/wakashio-indonesia/jadwal-kelas-baru/" class="collection-item">Jadwal kelas baru</a></li>
+            <li><a href="/wakashio-indonesia/keunggulan-kami/" class="collection-item">Keunggulan LPK Wakashio Gakkou</a></li>
+            <li><a href="/wakashio-indonesia/legalitas/" class="collection-item">Legalitas LPK Wakashio Gakkou</a></li>
+            <li><a href="/wakashio-indonesia/peta-lokasi-lpk-wakashio-gakkou/" class="collection-item">Lokasi LPK Wakashio Gakkou</a></li>
+          </ul>
+        </div>
+
+        <div class="menu-program-ke-jepang-container">
+          <ul id="menu-program-ke-jepang" class="collection with-header">
+            <h5 class="collection-header">Program ke Jepang</h5>
+            <li><a href="/wakashio-indonesia/program-magang/" class="collection-item">Program Magang</a></li>
+            <li><a href="/wakashio-indonesia/program-belajar/" class="collection-item">Program Belajar</a></li>
+            <li><a href="/wakashio-indonesia/program-kerja/" class="collection-item">Program Kerja</a></li>
+          </ul>
+        </div>
+
+        <div class="menu-magang-jepang-container">
+          <ul id="menu-magang-jepang" class="collection with-header">
+            <h5 class="collection-header">Pemagangan Jepang</h5>
+            <li><a href="/pemagangan-jepang/pengertian-magang-ke-jepang/" class="collection-item">Pengertian Magang ke Jepang</a></li>
+            <li><a href="/pemagangan-jepang/mengapa-magang-ke-jepang/" class="collection-item">Mengapa Magang Jepang ?</a></li>
+            <li><a href="/pemagangan-jepang/persyaratan-menjadi-pemagang-ke-jepang/" class="collection-item">Persyaratan Pemagangan Jepang</a></li>
+            <li><a href="/pemagangan-jepang/keuntungan-yang-di-dapat-dari-magang-ke-jepang/" class="collection-item">Keuntungan Magang Jepang</a></li>
+            <li><a href="/pemagangan-jepang/daftar-jenis-kerja-di-jepang/" class="collection-item">Daftar Jenis Kerja di Jepang</a></li>
+          </ul>
+        </div>
+
+        <div class="menu-program-belajar-container">
+          <ul id="menu-program-belajar" class="collection with-header">
+            <h5 class="collection-header">Program Belajar</h5>
+            <li><a title="Program Belajar Untuk Magang Ke Jepang" href="/wakashio-indonesia/program-belajar/program-belajar-untuk-program-magang-ke-jepang/" class="collection-item">Untuk Program Magang Jepang</a></li>
+            <li><a title="kursus Bahasa Jepang Untuk Masyarakat Umum" href="/wakashio-indonesia/program-belajar/kursus-bahasa-jepang-untuk-masyarakat-umum/" class="collection-item">Untuk Masyarakat Umum</a></li>
+            <li><a href="/wakashio-indonesia/program-belajar/belajar-bahasa-jepang-gratis/" class="collection-item">Belajar Bahasa Jepang Gratis</a></li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="col s12 m6 l12">
+
+        <div class="menu-jlpt-side-bar-container">
+          <ul id="menu-jlpt-side-bar" class="collection with-header">
+            <h5 class="collection-header">JLPT</h5>
+            <li><a href="/jlpt/" class="collection-item">Info JLPT</a></li>
+            <li><a href="/jlpt/kamus-mini-bahasa-jepang/" class="collection-item">Kosakata Bahasa Jepang</a></li>
+          </ul>
+        </div>
+
+        <div class="menu-galerry-side-bar-container">
+          <ul id="menu-galerry-side-bar" class="collection with-header">
+            <h5 class="collection-header">Galeri</h5>
+            <li><a href="/gallery/kegiatan-belajar/" class="collection-item">Kegiatan belajar</a></li>
+            <li><a href="/gallery/kegiatan-praktek-kerja/" class="collection-item">Kegiatan Praktek Kerja</a></li>
+            <li><a href="/gallery/sosialisasi-magang-jepang/" class="collection-item">Sosialisasi Magang Jepang</a></li>
+            <li><a href="/gallery/ekstra-kulikuler/" class="collection-item">Ekstra kulikuler</a></li>
+            <li><a href="/gallery/seleksi-magang-jepang/" class="collection-item">Seleksi Magang Jepang</a></li>
+            <li><a href="/gallery/keberangkatan-ke-jepang/" class="collection-item">Keberangkatan ke Jepang</a></li>
+            <li><a href="/gallery/saat-magang-di-jepang/" class="collection-item">Saat Magang di Jepang</a></li>
+            <li><a href="/gallery/jalan-jalan-di-jepang/" class="collection-item">Jalan-Jalan di Jepang</a></li>
+            <li><a href="/gallery/kerjasama-dengan-dinsosnakertrans/" class="collection-item">Kerjasama Dengan Dinsosnakertrans</a></li>
+            <li><a href="/gallery/siswa-wakashio-di-jepang/" class="collection-item">Siswa wakashio di jepang</a></li>
+          </ul>
+        </div>
+
+        <div class="menu-umroh-dan-haji-plus-container">
+          <ul id="menu-umroh-dan-haji-plus" class="collection with-header">
+            <h5 class="collection-header">Umroh &#038; Haji</h5>
+            <li><a href="/gallery/umroh-haji-plus/" class="collection-item">Umroh / Haji Plus</a></li>
+            <li><a href="/gallery/umroh-haji-orang-tua-siswa/" class="collection-item">Gallery Umroh/Haji</a></li>
+          </ul>
+        </div>
+      </div>
       </div>
     </div>
   </div>
@@ -444,7 +551,8 @@
           <!-- <img src="http://lorempixel.com/580/250/nature/4"> -->
           <div class="caption center-align">
             <h5>This is our big Tagline!</h5>
-            <p class="light grey-text text-lighten-3">Kesuksesan adalah hal yang harus dan wajib kita perjuangkan. Mendaki dari titik nol memang berat tapi itulah kesuksesan yang sebenarnya. Siapapun bisa dan siapapun mampu. Terima kasih LPK Wakashio Gakkou karena telah menjadi bagian dari Langkah kesuksesan dan Masa depan saya! Siapapun bisa, bukan hanya laki-laki yang bisa berkarya.</p>
+            <p class="light grey-text text-lighten-3">Kesuksesan adalah hal yang harus dan wajib kita perjuangkan. Mendaki dari titik nol memang berat tapi itulah kesuksesan yang sebenarnya. Siapapun bisa dan siapapun mampu. Terima kasih LPK Wakashio Gakkou karena telah menjadi bagian dari Langkah
+              kesuksesan dan Masa depan saya! Siapapun bisa, bukan hanya laki-laki yang bisa berkarya.</p>
             <img class="img-avatar" src="wk.png" alt="" />
             <p><a href="#" class="btn red lighten-3">Click here</a></p>
           </div>
@@ -500,7 +608,7 @@
     </div>
     <div class="footer-copyright blue-grey darken-4">
       <div class="container">
-      Designed by <a class="brown-text text-lighten-3" href="https://github.com/baddwin">bdd</a>
+        Designed by <a class="brown-text text-lighten-3" href="https://github.com/baddwin">bdd</a>
       </div>
     </div>
   </footer>
@@ -510,29 +618,32 @@
   <script src="dist/js/jquery.min.js" charset="utf-8"></script>
   <script src="dist/js/materialize.min.js"></script>
   <script src="jquery.flexslider-min.js"></script>
-<script type="text/javascript">
-(function($){
-  $(function(){
+  <script type="text/javascript">
+    (function($) {
+      $(function() {
 
-    $('.button-collapse').sideNav();
-    $('.parallax').parallax();
-    $('.slider').slider({full_width: true});
-    $('.nav-side').pushpin({ top: 400, offset: 40 });
-    // $('.dropdown-button').dropdown({hover: true});
-    // $('#mainnav').pushpin({ top: 30 });
-    $(window).on("scroll",function() {
-      if ($(this).scrollTop() > 10) {
-        $('#mainnav').addClass('sticky-thing');
-        // console.log('muncul');
-      } else {
-        $('#mainnav').removeClass('sticky-thing');
-        // console.log("removed");
-      }
-    });
+        $('.button-collapse').sideNav();
+        $('.parallax').parallax();
+        $('.slider').slider({
+          full_width: true
+        });
+        // $('.nav-side').pushpin({ top: 400, offset: 40 });
+        // $('.dropdown-button').dropdown({hover: true});
+        // $('#mainnav').pushpin({ top: 30 });
+        $(window).on("scroll", function() {
+          if ($(this).scrollTop() > 10) {
+            $('#mainnav').addClass('sticky-thing');
+            // console.log('muncul');
+          } else {
+            $('#mainnav').removeClass('sticky-thing');
+            // console.log("removed");
+          }
+        });
 
-  }); // end of document ready
-})(jQuery); // end of jQuery name space
-</script>
+      }); // end of document ready
+    })(jQuery); // end of jQuery name space
+  </script>
 
 </body>
+
 </html>
