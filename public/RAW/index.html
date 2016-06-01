@@ -303,6 +303,21 @@
     nav#mainnav ul > li.active > a {
       color: #fff;
     }
+
+    nav#mainnav ul.normal-sub {
+        width: 300px;
+        left: auto;
+        padding: 10px 0px;
+    }
+
+    nav#mainnav ul.normal-sub > li {
+        width: 100%;
+    }
+
+    nav#mainnav ul.normal-sub > li a {
+        border: 0;
+        /*padding: 1em 0;*/
+    }
     /* // TODO: compile css */
     /* ––––––––––––––––––––––––––––––––––––––––––––––––––
     Mobile style's
@@ -394,7 +409,12 @@
           <a id="logo-container" href="#" class="brand-logo"><img src="wip.png" alt="logo wakashio" /></a>
           <ul id="nav-main" class="right hide-on-med-and-down">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Tentang</a></li>
+            <li class="erste normal-sub"><a href="#">Tentang</a>
+              <ul class="normal-sub sub red darken-4">
+                <li><a href="/school">School</a></li>
+                <li><a href="#">Study</a></li>
+              </ul>
+            </li>
             <li class="erste"><a href="#">Magang Jepang</a>
               <ul class="sub red darken-4">
                 <li><a href="/school">School</a>
@@ -786,6 +806,8 @@
           }
         });
         // If width is more than 943px dropdowns are displayed on hover
+
+        // $('#nav-main > li.erste > ul:not(:has(ul))').addClass('normal-sub');
 
         $( 'a[href="#"]' ).click( function(e) {
           // if ($(window).width() > 1024) {
