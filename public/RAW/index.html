@@ -70,7 +70,7 @@
     }
 
     nav#topnav form {
-      width: 200px;
+      width: 170px;
       height: 30px;
     }
 
@@ -104,7 +104,7 @@
         line-height: 30px;
       }
       nav#topnav input#search:focus {
-        width: 100%;
+        width: 90%;
       }
     }
 
@@ -304,6 +304,57 @@
       color: #fff;
     }
     /* // TODO: compile css */
+    /* ––––––––––––––––––––––––––––––––––––––––––––––––––
+    Mobile style's
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+    @media only screen and (max-width: 959px) {
+        .menu-container {
+            width: 100%;
+        }
+        .menu-mobile {
+            display: block;
+        }
+        .menu-dropdown-icon:before {
+            display: block;
+        }
+        .menu > ul {
+            display: none;
+        }
+        .menu > ul > li {
+            width: 100%;
+            float: none;
+            display: block;
+        }
+        .menu > ul > li a {
+            padding: 1.5em;
+            width: 100%;
+            display: block;
+        }
+        .menu > ul > li > ul {
+            position: relative;
+        }
+        .menu > ul > li > ul.normal-sub {
+            width: 100%;
+        }
+        .menu > ul > li > ul > li {
+            float: none;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .menu > ul > li > ul > li:first-child {
+            margin: 0;
+        }
+        .menu > ul > li > ul > li > ul {
+            position: relative;
+        }
+        .menu > ul > li > ul > li > ul > li {
+            float: none;
+        }
+        .menu .show-on-mobile {
+            display: block;
+        }
+    }
   </style>
 </head>
 
@@ -316,8 +367,8 @@
       <div class="col m10 offset-m1">
         <div class="row">
         <div class="col m9 hide-on-small-and-down"> -->
-        <ul class="left font-wksh hide-on-small-and-down">
-          <li><a href="/lokasi" title="Wakashio Indonesia | Jl. Karya Bakti RT 04 / RW 02, Kecepak, Batang, Jawa Tengah"><i class="material-icons left">location_on</i>Wakashio Indonesia<span class="hide-on-med-and-down"> | Batang, Jawa Tengah</span></a></li>
+        <ul class="left font-wksh">
+          <li class="hide-on-small-and-down"><a href="/lokasi" title="Wakashio Indonesia | Jl. Karya Bakti RT 04 / RW 02, Kecepak, Batang, Jawa Tengah"><i class="material-icons left">location_on</i>Wakashio Indonesia<span class="hide-on-med-and-down"> | Batang, Jawa Tengah</span></a></li>
           <li><a href="tel:085766651024"><i class="material-icons left">call</i>085766651024</a></li>
         </ul>
         <!-- </div>
@@ -344,9 +395,9 @@
           <ul id="nav-main" class="right hide-on-med-and-down">
             <li class="active"><a href="#">Home</a></li>
             <li><a href="#">Tentang</a></li>
-            <li><a href="#">Magang Jepang</a>
+            <li class="erste"><a href="#">Magang Jepang</a>
               <ul class="sub red darken-4">
-                <li><a href="#">School</a>
+                <li><a href="/school">School</a>
                   <ul>
                     <li><a href="#">Leadership</a></li>
                     <li><a href="#">History</a></li>
@@ -706,6 +757,7 @@
         // $('.nav-side').pushpin({ top: 400, offset: 40 });
         var mainnav = $('#mainnav');
         var floatbtn = $('.btn-floating');
+        var parentli = $("#nav-main > li.erste");
         $(window).on("scroll", function() {
           if ($(this).scrollTop() > 10) {
             mainnav.addClass('sticky-thing');
@@ -725,16 +777,22 @@
           return false;
         });
 
-        $("#nav-main > li").hover(function(e) {
+        parentli.on("mouseenter mouseleave",function(e) {
           if ($(window).width() > 976) {
             $(this).children("ul").stop(true, false).toggle();
             $(this).toggleClass("active");
-            e.preventDefault();
+            // e.preventDefault();
             // console.log("togled");
           }
         });
-        //If width is more than 943px dropdowns are displayed on hover
+        // If width is more than 943px dropdowns are displayed on hover
 
+        $( 'a[href="#"]' ).click( function(e) {
+          // if ($(window).width() > 1024) {
+            e.preventDefault();
+            // console.log("prevent");
+          // }
+        } );
       }); // end of document ready
     })(jQuery); // end of jQuery name space
   </script>
