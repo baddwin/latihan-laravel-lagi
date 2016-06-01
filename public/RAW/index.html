@@ -226,7 +226,7 @@
     nav ul.sub {
         display: none;
         width: 100%;
-        background: #f0f0f0;
+        /*background: #f0f0f0;*/
         padding: 0;
         position: absolute;
         z-index: 99;
@@ -258,9 +258,10 @@
     }
 
     nav ul.sub > li a {
-        color: #777;
+        color: #fff;
         line-height: 48px;
-        width: 95%;
+        width: 90%;
+        margin-left: 5%;
         display: block;
         border-bottom: 1px solid #ccc;
     }
@@ -291,10 +292,19 @@
         font-size: .8em;
     }
 
-    ul.sub > li > ul > li a {
+    nav ul.sub > li > ul > li a {
         border: 0;
     }
 
+    nav ul > li:hover,
+    nav ul > li.active {
+        background-color: #b71c1c ;
+    }
+
+    nav ul > li > a:hover,
+    nav ul > li.active > a {
+        color: #fff;
+    }
   </style>
 </head>
 
@@ -336,7 +346,7 @@
             <li class="active"><a href="#">Home</a></li>
             <li><a href="#">Tentang</a></li>
             <li><a href="#">Magang Jepang</a>
-              <ul class="sub">
+              <ul class="sub red darken-4">
                   <li><a href="#">School</a>
                       <ul>
                           <li><a href="#">Leadership</a></li>
@@ -362,6 +372,7 @@
                       </ul>
                   </li>
                   <li><a href="#">Empty sub</a></li>
+                  <li><a href="#">Empty sub 2</a></li>
               </ul>
             </li>
             <li><a href="#">Gallery</a></li>
@@ -754,6 +765,7 @@
         $("#nav-main > li").hover(function (e) {
             if ($(window).width() > 943) {
                 $(this).children("ul").stop(true, false).toggle();
+                $(this).toggleClass("active");
                 e.preventDefault();
                 // console.log("togled");
             }
