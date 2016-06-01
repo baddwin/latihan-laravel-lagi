@@ -220,6 +220,81 @@
     footer.page-footer {
       margin: 0;
     }
+
+    /* menu */
+
+    nav ul.sub {
+        display: none;
+        width: 100%;
+        background: #f0f0f0;
+        padding: 0;
+        position: absolute;
+        z-index: 99;
+        left: 0;
+        margin: 0;
+        list-style: none;
+        box-sizing: border-box;
+        /*height: 40px;*/
+    }
+
+    nav ul.sub:before,
+    nav ul.sub:after {
+        content: "";
+        display: table;
+    }
+
+    nav ul.sub:after {
+        clear: both;
+    }
+
+    nav ul.sub > li {
+        margin: 0;
+        padding-bottom: 0;
+        padding-top: 0;
+        list-style: none;
+        width: 25%;
+        background: none;
+        float: left;
+    }
+
+    nav ul.sub > li a {
+        color: #777;
+        /*padding: .2em 0;*/
+        width: 95%;
+        display: block;
+        border-bottom: 1px solid #ccc;
+    }
+
+    nav ul.sub > li > ul {
+        display: block;
+        padding: 0;
+        /*margin: 10px 0 0;*/
+        list-style: none;
+        box-sizing: border-box;
+    }
+
+    nav ul.sub > li > ul:before,
+    nav ul.sub > li > ul:after {
+        content: "";
+        display: table;
+    }
+
+    nav ul.sub > li > ul:after {
+        clear: both;
+    }
+
+    nav ul.sub > li > ul > li {
+        float: left;
+        width: 100%;
+        /*padding: 10px 0;*/
+        margin: 0;
+        font-size: .8em;
+    }
+
+    ul.sub > li > ul > li a {
+        border: 0;
+    }
+
   </style>
 </head>
 
@@ -260,107 +335,46 @@
           <ul id="nav-main" class="right hide-on-med-and-down">
             <li class="active"><a href="#">Home</a></li>
             <li><a href="#">Tentang</a></li>
-            <li><a href="#">Magang Jepang</a></li>
+            <li><a href="#">Magang Jepang</a>
+              <ul class="sub">
+                  <li><a href="#">School</a>
+                      <ul>
+                          <li><a href="#">Leadership</a></li>
+                          <li><a href="#">History</a></li>
+                          <li><a href="#">Locations</a></li>
+                          <li><a href="#">Careers</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="#">Study</a>
+                      <ul>
+                          <li><a href="#">Undergraduate</a></li>
+                          <li><a href="#">Masters</a></li>
+                          <li><a href="#">International</a></li>
+                          <li><a href="#">Online</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="#">Study</a>
+                      <ul>
+                          <li><a href="#">Undergraduate</a></li>
+                          <li><a href="#">Masters</a></li>
+                          <li><a href="#">International</a></li>
+                          <li><a href="#">Online</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="#">Empty sub</a></li>
+              </ul>
+            </li>
             <li><a href="#">Gallery</a></li>
             <!-- <li><a class="dropdown-button" href="#" data-hover="true" data-beloworigin="true" data-activates="dropdown-ttg">Gallery</a></li> -->
             <li><a href="#">Info Terbaru</a></li>
             <li><a href="#">Lokasi</a></li>
             <!-- <li><a class="waves-effect waves-light btn red">Pendaftaran Online</a></li> -->
           </ul>
-          <!-- <ul id='dropdown-ttg' class='dropdown-content'>
-            <li><a href="#!">one</a></li>
-            <li><a href="#!">two</a></li>
-            <li class="divider"></li>
-            <li><a href="#!">three</a></li>
-          </ul> -->
-          <!-- <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-          <ul id="nav-mobile" class="side-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a class="waves-effect waves-light btn red">Pendaftaran Online</a></li>
-          </ul> -->
 
         </div>
       </nav>
     </div>
 
-    <div class="menu-container">
-        <div class="menu">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="http://marioloncarek.com">About</a>
-                    <ul>
-                        <li><a href="http://marioloncarek.com">School</a>
-                            <ul>
-                                <li><a href="http://marioloncarek.com">Lidership</a></li>
-                                <li><a href="#">History</a></li>
-                                <li><a href="#">Locations</a></li>
-                                <li><a href="#">Careers</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Study</a>
-                            <ul>
-                                <li><a href="#">Undergraduate</a></li>
-                                <li><a href="#">Masters</a></li>
-                                <li><a href="#">International</a></li>
-                                <li><a href="#">Online</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Research</a>
-                            <ul>
-                                <li><a href="#">Undergraduate research</a></li>
-                                <li><a href="#">Masters research</a></li>
-                                <li><a href="#">Funding</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Something</a>
-                            <ul>
-                                <li><a href="#">Sub something</a></li>
-                                <li><a href="#">Sub something</a></li>
-                                <li><a href="#">Sub something</a></li>
-                                <li><a href="#">Sub something</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="http://marioloncarek.com">News</a>
-                    <ul>
-                        <li><a href="http://marioloncarek.com">Today</a></li>
-                        <li><a href="#">Calendar</a></li>
-                        <li><a href="#">Sport</a></li>
-                    </ul>
-                </li>
-                <li><a href="http://marioloncarek.com">Contact</a>
-                    <ul>
-                        <li><a href="#">School</a>
-                            <ul>
-                                <li><a href="#">Lidership</a></li>
-                                <li><a href="#">History</a></li>
-                                <li><a href="#">Locations</a></li>
-                                <li><a href="#">Careers</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Study</a>
-                            <ul>
-                                <li><a href="#">Undergraduate</a></li>
-                                <li><a href="#">Masters</a></li>
-                                <li><a href="#">International</a></li>
-                                <li><a href="#">Online</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Study</a>
-                            <ul>
-                                <li><a href="#">Undergraduate</a></li>
-                                <li><a href="#">Masters</a></li>
-                                <li><a href="#">International</a></li>
-                                <li><a href="#">Online</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Empty sub</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
   </header>
 
   <main>
@@ -736,6 +750,15 @@
             }, 600);
           return false;
         });
+
+        $("#nav-main > li").hover(function (e) {
+            if ($(window).width() > 943) {
+                $(this).children("ul").stop(true, false).toggle();
+                e.preventDefault();
+                // console.log("togled");
+            }
+        });
+        //If width is more than 943px dropdowns are displayed on hover
 
       }); // end of document ready
     })(jQuery); // end of jQuery name space
