@@ -317,7 +317,7 @@
         <div class="row">
         <div class="col m9 hide-on-small-and-down"> -->
         <ul class="left font-wksh hide-on-small-and-down">
-          <li><i class="material-icons left">location_on</i>Wakashio Indonesia <span class="hide-on-med-and-down">| Jl. Karya Bakti RT 04 / RW 02, Kecepak, Batang, Jawa Tengah</span></li>
+          <li><a href="/lokasi" title="Wakashio Indonesia | Jl. Karya Bakti RT 04 / RW 02, Kecepak, Batang, Jawa Tengah"><i class="material-icons left">location_on</i>Wakashio Indonesia<span class="hide-on-med-and-down"> | Batang, Jawa Tengah</span></a></li>
           <li><a href="tel:085766651024"><i class="material-icons left">call</i>085766651024</a></li>
         </ul>
         <!-- </div>
@@ -330,7 +330,7 @@
             <!-- <i class="material-icons">close</i> -->
           </div>
         </form>
-        <!-- </div>
+      <!-- </div>
       </div>
       </div>
       <div class="col m1"> -->
@@ -455,6 +455,7 @@
 
         <article class="section">
           <!--   Article Section   -->
+          <h2 class="center-align">Article section</h2>
           <div class="row">
             <div class="col s12 m4">
               <div class="icon-block">
@@ -487,6 +488,7 @@
         </article>
 
         <section class="section">
+          <h2 class="center-align">Video Section</h2>
           <div class="video-container">
             <iframe width="640" height="360" src="//www.youtube.com/embed/HdhiX9bUVXY?rel=0" frameborder="0" allowfullscreen></iframe>
           </div>
@@ -496,7 +498,6 @@
 
       <div class="col s12 m12 l2 pull-l8">
         <aside class="nav-side">
-
           <div class="hide-on-med-and-down">
             <ul id="menu-wakashio-sidebar-utama" class="collection with-header red">
               <h5 class="collection-header font-wksh red white-text">Wakashio Indonesia</h5>
@@ -607,29 +608,29 @@
           <li>
             <!-- <img src="http://lorempixel.com/580/250/nature/1">-->
             <div class="caption center-align">
-              <h5>Dodit Mulyanto</h5>
-              <p class="light grey-text text-lighten-3">hidup itu ya tidak mati.</p>
+              <h5>Siapa</h5>
+              <p class="light grey-text text-lighten-3">...terima kasih kepada sensei di Wakashio Gakkou yang membimbing saya dan selalu memberi semangat agar tidak mudah putus asa. Itsudemo ganbarimasu!</p>
               <img class="img-avatar" src="wk.png" alt="" />
-              <p><a href="#" class="btn red lighten-3">Click here</a></p>
+              <p><a href="#" class="btn red darken-4">Click here</a></p>
             </div>
           </li>
           <li>
             <!-- <img src="http://lorempixel.com/580/250/nature/4"> -->
             <div class="caption center-align">
-              <h5>Vincent Desta</h5>
-              <p class="light grey-text text-lighten-3">lo ngomong jangan asal.</p>
+              <h5>Seseorang</h5>
+              <p class="light grey-text text-lighten-3">...selalu berpikir positif dalam keadaan apapun dan di manapun, hidupmu pasti akan nyaman dan tenang. Salam buat seluruh staff Lpk Wakashio Gakkou.</p>
               <img class="img-avatar" src="wk.png" alt="" />
-              <p><a href="#" class="btn red lighten-3">Click here</a></p>
+              <p><a href="#" class="btn red darken-4">Click here</a></p>
             </div>
           </li>
           <li>
             <!-- <img src="http://lorempixel.com/580/250/nature/4"> -->
             <div class="caption center-align">
-              <h5>This is our big Tagline!</h5>
+              <h5>Orang yang lain</h5>
               <p class="light grey-text text-lighten-3">Kesuksesan adalah hal yang harus dan wajib kita perjuangkan. Mendaki dari titik nol memang berat tapi itulah kesuksesan yang sebenarnya. Siapapun bisa dan siapapun mampu. Terima kasih LPK Wakashio Gakkou karena telah menjadi bagian dari
                 Langkah kesuksesan dan Masa depan saya! Siapapun bisa, bukan hanya laki-laki yang bisa berkarya.</p>
               <img class="img-avatar" src="wk.png" alt="" />
-              <p><a href="#" class="btn red lighten-3">Click here</a></p>
+              <p><a href="#" class="btn red darken-4">Click here</a></p>
             </div>
           </li>
         </ul>
@@ -703,8 +704,6 @@
           full_width: true
         });
         // $('.nav-side').pushpin({ top: 400, offset: 40 });
-        // $('.dropdown-button').dropdown({hover: true});
-        // $('#mainnav').pushpin({ top: 30 });
         var mainnav = $('#mainnav');
         var floatbtn = $('.btn-floating');
         $(window).on("scroll", function() {
@@ -727,7 +726,7 @@
         });
 
         $("#nav-main > li").hover(function(e) {
-          if ($(window).width() > 992) {
+          if ($(window).width() > 976) {
             $(this).children("ul").stop(true, false).toggle();
             $(this).toggleClass("active");
             e.preventDefault();
