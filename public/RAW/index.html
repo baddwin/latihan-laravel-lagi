@@ -347,6 +347,10 @@
         /*top: 10%;*/
       }
 
+      .erste > a, .erste > ul > li > a {
+        font-weight: bold;
+      }
+
         nav#mainnav a.button-menu {
           display: block;
         }
@@ -361,7 +365,7 @@
             /*display: none;*/
             width: 100%;
             /*background-color: beige;*/
-            line-height: 40px;
+            /*line-height: 40px;*/
             overflow-y: scroll;
         }
         ul#nav-main > li {
@@ -373,9 +377,11 @@
             padding: 1em;
             width: 100%;
             display: block;
+            color: #fff;
         }
         ul#nav-main > li > ul {
             position: relative;
+            padding-left: 10px;
         }
         ul#nav-main > li > ul.normal-sub {
             width: 100%;
@@ -383,13 +389,16 @@
         ul#nav-main > li > ul > li {
             float: none;
             width: 100%;
-            margin-top: 20px;
+            /*padding-left: 10px;*/
         }
         ul#nav-main > li > ul > li:first-child {
             margin: 0;
+            /*border-bottom: 1px solid #fff;
+            padding-left: 10px;*/
         }
         ul#nav-main > li > ul > li > ul {
             position: relative;
+            padding-left: 10px;
         }
         ul#nav-main > li > ul > li > ul > li {
             float: none;
@@ -437,15 +446,15 @@
           <a href="#menu" class="button-menu"><i class="material-icons red-text darken-4">menu</i></a>
           <a id="logo-container" href="#" class="brand-logo"><img src="wip.png" alt="logo wakashio" /></a>
           <ul id="nav-main" class="right hide-on-med-and-down">
-            <li class="active"><a href="#">Home</a></li>
+            <li class="erste active"><a href="#">Home</a></li>
             <li class="erste"><a href="#">Tentang</a>
-              <ul class="normal-sub sub red darken-4">
+              <ul class="normal-sub sub red darken-3">
                 <li><a href="/school">School</a></li>
                 <li><a href="#">Study</a></li>
               </ul>
             </li>
             <li class="erste"><a href="#">Magang Jepang</a>
-              <ul class="sub red darken-4">
+              <ul class="sub red darken-3">
                 <li><a href="/school">School</a>
                   <ul>
                     <li><a href="#">Leadership</a></li>
@@ -475,7 +484,7 @@
               </ul>
             </li>
             <li class="erste"><a href="#">Gallery</a>
-              <ul class="sub red darken-4">
+              <ul class="sub red darken-3">
                 <li><a href="/school">School</a>
                   <ul>
                     <li><a href="#">Leadership</a></li>
@@ -489,12 +498,12 @@
               </ul>
             </li>
             <li class="erste"><a href="#">Info Terbaru</a>
-              <ul class="normal-sub sub red darken-4">
+              <ul class="normal-sub sub red darken-3">
                 <li><a href="/school">School</a></li>
                 <li><a href="#">Study</a></li>
               </ul>
             </li>
-            <li><a href="#">Lokasi</a></li>
+            <li class="erste"><a href="#">Lokasi</a></li>
             <!-- <li><a class="waves-effect waves-light btn red">Pendaftaran Online</a></li> -->
           </ul>
 
