@@ -341,10 +341,10 @@
     @media only screen and (max-width: 992px) {
       .parallax-container .section {
         position: absolute;
-        top: 40%;
+        /*top: 40%;*/
       }
       #index-banner .section {
-        top: 10%;
+        /*top: 10%;*/
       }
 
         nav#mainnav a.button-menu {
@@ -362,6 +362,7 @@
             width: 100%;
             background-color: beige;
             line-height: 40px;
+            overflow-y: scroll;
         }
         ul#nav-main > li {
             width: 100%;
@@ -843,7 +844,8 @@
         // ^ sudah ditambahkan ke css
         $(".button-menu").click(function (e) {
             // $("nav#mainnav > ul").toggleClass('show-on-mobile');
-            $("ul#nav-main").toggleClass("hide-on-med-and-down");
+            $("ul#nav-main").toggleClass("hide-on-med-and-down").css('height', $(window).height()-30);
+            // $(".navbar-fixed").css('position','absolute');
             // console.log("menu clicked");
             e.preventDefault();
         });
