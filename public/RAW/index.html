@@ -9,7 +9,7 @@
 
   <!-- Materialize CSS -->
   <link rel="stylesheet" href="dist/css/materialize.min.css">
-  <link rel="stylesheet" href="megamenu.css" media="screen" title="no title" charset="utf-8">
+  <!-- <link rel="stylesheet" href="megamenu.css" media="screen" title="no title" charset="utf-8"> -->
   <!-- <link rel="stylesheet" href="verticalmenu.css" media="screen" title="no title" charset="utf-8"> -->
   <!-- <link rel="stylesheet" href="dist/font/material-design-icons/Material-Design-Icons.woff">
   <link rel="stylesheet" href="dist/font/roboto/Roboto-Regular.woff"> -->
@@ -95,19 +95,6 @@
       font-family: 'Oswald', 'Roboto', sans-serif;
     }
 
-    @media only screen and (min-width: 601px) {
-      nav#topnav,
-      nav#topnav .nav-wrapper i,
-      nav#topnav a.button-collapse,
-      nav#topnav a.button-collapse i {
-        height: 30px;
-        line-height: 30px;
-      }
-      nav#topnav input#search:focus {
-        width: 90%;
-      }
-    }
-
     .breakout {
       margin-top: -70px;
     }
@@ -123,14 +110,6 @@
 
     .brand-logo img {
       max-height: 100%;
-    }
-
-    .sticky-thing {
-      position: fixed;
-      top: 0;
-      height: 40px;
-      line-height: 40px;
-      /*margin-bottom: 64px;*/
     }
 
     .slides li img.img-avatar {
@@ -190,22 +169,6 @@
 
     .parallax-container .section {
       width: 100%;
-    }
-
-    @media only screen and (max-width: 992px) {
-      .parallax-container .section {
-        position: absolute;
-        top: 40%;
-      }
-      #index-banner .section {
-        top: 10%;
-      }
-    }
-
-    @media only screen and (max-width: 600px) {
-      #index-banner .section {
-        top: 0;
-      }
     }
 
     .icon-block {
@@ -318,55 +281,119 @@
         border: 0;
         /*padding: 1em 0;*/
     }
+    nav#mainnav a.button-menu {
+      float: left;
+      position: relative;
+      z-index: 1;
+      height: 56px;
+      display: none;
+    }
+
+    nav#mainnav a.button-menu i {
+      font-size: 2rem;
+      height: 56px;
+      line-height: 56px;
+    }
+
+    .sticky-thing {
+      position: fixed;
+      top: 0;
+      height: 40px;
+      line-height: 40px;
+      /*margin-bottom: 64px;*/
+    }
+
+    .shrinked {
+      height: 40px !important;
+      line-height: 40px !important;
+    }
     /* // TODO: compile css */
     /* ––––––––––––––––––––––––––––––––––––––––––––––––––
     Mobile style's
     –––––––––––––––––––––––––––––––––––––––––––––––––– */
+    @media only screen and (min-width: 601px) {
+      nav#topnav,
+      nav#topnav .nav-wrapper i,
+      nav#topnav a.button-collapse,
+      nav#topnav a.button-collapse i {
+        height: 30px;
+        line-height: 30px;
+      }
+      nav#topnav input#search:focus {
+        width: 90%;
+      }
 
-    @media only screen and (max-width: 959px) {
-        .menu-container {
-            width: 100%;
+      #index-banner .section {
+        top: 0;
+      }
+
+      nav#mainnav a.button-menu {
+        height: 64px;
+      }
+
+      nav#mainnav a.button-menu i {
+        font-size: 2.7rem;
+        height: 64px;
+        line-height: 64px;
+      }
+    }
+
+    @media only screen and (max-width: 992px) {
+      .parallax-container .section {
+        position: absolute;
+        top: 40%;
+      }
+      #index-banner .section {
+        top: 10%;
+      }
+
+        nav#mainnav a.button-menu {
+          display: block;
         }
+
         .menu-mobile {
             display: block;
         }
         .menu-dropdown-icon:before {
             display: block;
         }
-        .menu > ul {
-            display: none;
+        ul#nav-main {
+            /*display: none;*/
+            width: 100%;
+            background-color: beige;
+            line-height: 40px;
         }
-        .menu > ul > li {
+        ul#nav-main > li {
             width: 100%;
             float: none;
             display: block;
         }
-        .menu > ul > li a {
-            padding: 1.5em;
+        ul#nav-main > li a {
+            padding: 1em;
             width: 100%;
             display: block;
         }
-        .menu > ul > li > ul {
+        ul#nav-main > li > ul {
             position: relative;
         }
-        .menu > ul > li > ul.normal-sub {
+        ul#nav-main > li > ul.normal-sub {
             width: 100%;
         }
-        .menu > ul > li > ul > li {
+        ul#nav-main > li > ul > li {
             float: none;
             width: 100%;
             margin-top: 20px;
         }
-        .menu > ul > li > ul > li:first-child {
+        ul#nav-main > li > ul > li:first-child {
             margin: 0;
         }
-        .menu > ul > li > ul > li > ul {
+        ul#nav-main > li > ul > li > ul {
             position: relative;
         }
-        .menu > ul > li > ul > li > ul > li {
+        ul#nav-main > li > ul > li > ul > li {
             float: none;
         }
-        .menu .show-on-mobile {
+        nav#mainnav .show-on-mobile {
             display: block;
         }
     }
@@ -406,6 +433,7 @@
     <div class="navbar-fixed">
       <nav id="mainnav" class="white" role="navigation">
         <div class="nav-wrapper container">
+          <a href="#menu" class="button-menu"><i class="material-icons red-text darken-4">menu</i></a>
           <a id="logo-container" href="#" class="brand-logo"><img src="wip.png" alt="logo wakashio" /></a>
           <ul id="nav-main" class="right hide-on-med-and-down">
             <li class="active"><a href="#">Home</a></li>
@@ -764,7 +792,7 @@
   <script src="dist/js/jquery.min.js" charset="utf-8"></script>
   <script src="dist/js/materialize.min.js"></script>
   <script src="jquery.flexslider-min.js"></script>
-  <script src="megamenu.js" charset="utf-8"></script>
+  <!-- <script src="megamenu.js" charset="utf-8"></script> -->
   <script type="text/javascript">
     (function($) {
       $(function() {
@@ -778,13 +806,17 @@
         var mainnav = $('#mainnav');
         var floatbtn = $('.btn-floating');
         var parentli = $("#nav-main > li.erste");
+        var menubtn = $('#mainnav a.button-menu, a.button-menu > i');
         $(window).on("scroll", function() {
           if ($(this).scrollTop() > 10) {
             mainnav.addClass('sticky-thing');
+            menubtn.addClass('shrinked');
             floatbtn.fadeIn();
+            // menubtn.css({'height': '40px', 'line-height': '40px'});
             // console.log('muncul');
           } else {
             mainnav.removeClass('sticky-thing');
+            menubtn.removeClass('shrinked');
             floatbtn.fadeOut();
             // console.log("removed");
           }
@@ -806,8 +838,15 @@
           }
         });
         // If width is more than 943px dropdowns are displayed on hover
-
+        // TODO: mobile nav
         // $('#nav-main > li.erste > ul:not(:has(ul))').addClass('normal-sub');
+        // ^ sudah ditambahkan ke css
+        $(".button-menu").click(function (e) {
+            // $("nav#mainnav > ul").toggleClass('show-on-mobile');
+            $("ul#nav-main").toggleClass("hide-on-med-and-down");
+            // console.log("menu clicked");
+            e.preventDefault();
+        });
 
         $( 'a[href="#"]' ).click( function(e) {
           // if ($(window).width() > 1024) {
