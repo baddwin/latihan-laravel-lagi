@@ -360,7 +360,7 @@
         ul#nav-main {
             /*display: none;*/
             width: 100%;
-            background-color: beige;
+            /*background-color: beige;*/
             line-height: 40px;
             overflow-y: scroll;
         }
@@ -438,7 +438,7 @@
           <a id="logo-container" href="#" class="brand-logo"><img src="wip.png" alt="logo wakashio" /></a>
           <ul id="nav-main" class="right hide-on-med-and-down">
             <li class="active"><a href="#">Home</a></li>
-            <li class="erste normal-sub"><a href="#">Tentang</a>
+            <li class="erste"><a href="#">Tentang</a>
               <ul class="normal-sub sub red darken-4">
                 <li><a href="/school">School</a></li>
                 <li><a href="#">Study</a></li>
@@ -474,9 +474,26 @@
                 <li><a href="#">Empty sub 2</a></li>
               </ul>
             </li>
-            <li><a href="#">Gallery</a></li>
-            <!-- <li><a class="dropdown-button" href="#" data-hover="true" data-beloworigin="true" data-activates="dropdown-ttg">Gallery</a></li> -->
-            <li><a href="#">Info Terbaru</a></li>
+            <li class="erste"><a href="#">Gallery</a>
+              <ul class="sub red darken-4">
+                <li><a href="/school">School</a>
+                  <ul>
+                    <li><a href="#">Leadership</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Locations</a></li>
+                    <li><a href="#">Careers</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Empty sub</a></li>
+                <li><a href="#">Empty sub 2</a></li>
+              </ul>
+            </li>
+            <li class="erste"><a href="#">Info Terbaru</a>
+              <ul class="normal-sub sub red darken-4">
+                <li><a href="/school">School</a></li>
+                <li><a href="#">Study</a></li>
+              </ul>
+            </li>
             <li><a href="#">Lokasi</a></li>
             <!-- <li><a class="waves-effect waves-light btn red">Pendaftaran Online</a></li> -->
           </ul>
@@ -484,6 +501,8 @@
         </div>
       </nav>
     </div>
+
+    <div id="mobnav"></div>
 
     <div id="index-banner" class="parallax-container row">
       <div class="section no-pad-bot">
@@ -808,6 +827,7 @@
         var floatbtn = $('.btn-floating');
         var parentli = $("#nav-main > li.erste");
         var menubtn = $('#mainnav a.button-menu, a.button-menu > i');
+        var mobnav = $("#mobnav");
         $(window).on("scroll", function() {
           if ($(this).scrollTop() > 10) {
             mainnav.addClass('sticky-thing');
@@ -844,9 +864,18 @@
         // ^ sudah ditambahkan ke css
         $(".button-menu").click(function (e) {
             // $("nav#mainnav > ul").toggleClass('show-on-mobile');
-            $("ul#nav-main").toggleClass("hide-on-med-and-down").css('height', $(window).height()-30);
+            // $("ul#nav-main").toggleClass("hide-on-med-and-down").css('height', $(window).height()-30);
             // $(".navbar-fixed").css('position','absolute');
             // console.log("menu clicked");
+            if (mobnav.is(":empty")) {
+              $("#nav-main").clone().appendTo("#mobnav");
+              $("#mobnav #nav-main").removeClass("hide-on-med-and-down").addClass("hide-on-large-only red darken-4");
+              mobnav.show();
+            }
+            else {
+              // console.log("tidak kosong");
+              mobnav.toggle();
+            }
             e.preventDefault();
         });
 
